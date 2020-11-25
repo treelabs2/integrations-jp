@@ -1,7 +1,7 @@
-# Example Tree Integrations
+# Treeインテグレーションの例
 
-This repository contains example integrations that you can use as a base for creating your own. Make sure to check out the tutorials and references on the [Tree Documentation](https://treedocs.now.sh/) website.
+このリポジトリには、独自のリポを作成するためのベースに使用することができるインテグレーションの例が含まれています。[Treeドキュメンテーション](https://treedocs.now.sh/) ウェブサイトのチュートリアルとリファレンスを確認してください。
 
-## License
+## ライセンス
 
-The Tree documentation is an open source project released under the [MIT License](https://github.com/treelabs/integrations/blob/master/LICENSE.md).
+Treeドキュメントは、[MITライセンス](https://github.com/treelabs/integrations/blob/master/LICENSE.md)の下でリリースされたオープンソースプロジェクトです。
