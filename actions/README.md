@@ -1,6 +1,6 @@
 # Treeインテグレーション: アクション
 
-[UIフック](https://treedocs.now.sh/docs/v1/hooks/ui/introduction/)は[アクション](https://treedocs.now.sh/docs/v1/hooks/ui/actions/)を使用してページを動的に変更したり、外部サービスとやり取りしたりする方法を示します。
+[アクション](https://treedocs.now.sh/docs/v1/hooks/ui/actions/)を使用してページを動的に変更したり、外部サービスとやり取りしたりする方法を示す[UIフック](https://treedocs.now.sh/docs/v1/hooks/ui/introduction/)です。
 
 ## 前提条件
 
