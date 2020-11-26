@@ -1,6 +1,6 @@
 # Treeインテグレーション: カウンター
 
-A [UI Hook](https://treedocs.now.sh/docs/v1/hooks/ui/introduction/) serving a Page with a Button that increments a counter, as an illustration of [Actions](https://treedocs.now.sh/docs/v1/hooks/ui/actions).
+[アクション](https://treedocs.now.sh/docs/v1/hooks/ui/actions)の例として、カウンターをインクリメントするボタンを備えたページを提供する[UIフック](https://treedocs.now.sh/docs/v1/hooks/ui/introduction/)。
 
 ## 前提条件
 
