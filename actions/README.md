@@ -23,6 +23,6 @@ ngrok http 3000
 
 ngrokによって作成された転送URL（「.ngrok.io」で終わる）をメモしておいてください。
 
-次に、[ツリーインテグレーション](https://treedocs.now.sh/docs/v1/getting-started/)を作成し、UIフックURLをngrok転送URLに設定します。
+次に、[Treeインテグレーション](https://treedocs.now.sh/docs/v1/getting-started/)を作成し、UIフックURLをngrok転送URLに設定します。
 
 これで、Treeモバイルアプリにログインして、インテグレーションの動作を確認できます。
