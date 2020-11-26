@@ -1,6 +1,6 @@
 # Treeインテグレーション: リンク
 
-A [UI Hook](https://treedocs.now.sh/docs/v1/hooks/ui/introduction/) serving a page that [links](https://treedocs.now.sh/docs/v1/blocks/basic/#link) to another page.
+別のページに[リンク](https://treedocs.now.sh/docs/v1/blocks/basic/#link)するページを提供する[UIフック](https://treedocs.now.sh/docs/v1/hooks/ui/introduction/)。
 
 ## 前提条件
 
