@@ -1,28 +1,28 @@
-# Tree Integration: Counter
+# Treeインテグレーション: カウンター
 
 A [UI Hook](https://treedocs.now.sh/docs/v1/hooks/ui/introduction/) serving a Page with a Button that increments a counter, as an illustration of [Actions](https://treedocs.now.sh/docs/v1/hooks/ui/actions).
 
-## Prerequisites
+## 前提条件
 
 - [Node.js](https://nodejs.org)
 - [ngrok](https://ngrok.com)
 
-## Run Locally
+## ローカルで実行
 
-Run this UI Hook locally with:
+次のコマンドを使用して、UIフックをローカルで実行します。:
 
 ```bash
 node index.js 3000
 ```
 
-Then create a tunnel to localhost on port 3000 using ngrok:
+次に、ngrokを使用してポート3000でローカルホストへのトンネルを作成します。:
 
 ```bash
 ngrok http 3000
 ```
 
-Take note of the forwarding URL created by ngrok (ending in ".ngrok.io").
+ngrokによって作成された転送URL（「.ngrok.io」で終わる）をメモしておいてください。
 
-Then create a [Tree Integration](https://treedocs.now.sh/docs/v1/getting-started/) and set the UI Hook URL to the ngrok forwarding URL.
+次に、[Treeインテグレーション](https://treedocs.now.sh/docs/v1/getting-started/)を作成し、UIフックURLをngrok転送URLに設定します。
 
-You can now log in to the Tree mobile app and see your Integration in action.
+これで、Treeモバイルアプリにログインして、インテグレーションの動作を確認できます。
