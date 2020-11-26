@@ -1,59 +1,59 @@
-# Tree Integration: Contentful
+# Treeインテグレーション: Contentful
 
-A [UI Hook](https://treedocs.now.sh/docs/v1/hooks/ui/introduction/) serving pages created with [Contentful](https://www.contentful.com/).
+[Contentful](https://www.contentful.com/)で作成されたページを提供する[UIフック](https://treedocs.now.sh/docs/v1/hooks/ui/introduction/)。.
 
-## Prerequisites
+## 前提条件
 
 - [Node.js](https://nodejs.org)
 - [ngrok](https://ngrok.com)
 
-## Run Locally
+## ローカルで実行
 
-Run this UI Hook locally with:
+次のコマンドを使用して、UIフックをローカルで実行します。:
 
 ```bash
 npm start
 ```
 
-Then create a tunnel to localhost on port 3000 using ngrok:
+次に、ngrokを使用してポート3000でローカルホストへのトンネルを作成します。:
 
 ```bash
 ngrok http 3000
 ```
 
-Take note of the forwarding URL created by ngrok (ending in ".ngrok.io").
+ngrokによって作成された転送URL（「.ngrok.io」で終わる）をメモしておいてください。
 
-Then create a [Tree Integration](https://treedocs.now.sh/docs/v1/getting-started/) and set the UI Hook URL to the ngrok forwarding URL.
+次に、[Treeインテグレーション](https://treedocs.now.sh/docs/v1/getting-started/)を作成し、UIフックURLをngrok転送URLに設定します。
 
-You can now log in to the Tree mobile app and see your Integration in action.
+これで、Treeモバイルアプリにログインして、インテグレーションの動作を確認できます。
 
-### Accessing FaunaDB
+### FaunaDBへのアクセス
 
-Create a file named `.env` and add the following:
+`.env`という名前のファイルを作成し、以下を追加します。:
 
 ```
 FAUNADB_TYPEFORM_SECRET_KEY=<your_secret_key>
 ```
 
-Make sure to gitignore this file.
+このファイルは必ずgitignoreしてください。
 
-## Deploying to Now
+## 今すぐ展開
 
-Add the FaunaDB secret key to Now:
+FaunaDBのsecret keyをNowに追加します。:
 
 ```bash
 now secrets add FAUNADB_TYPEFORM_SECRET_KEY <your_secret_key>
 ```
 
-## UI Hook
+## UIフック
 
-An instance of this integration is running at:
+このインテグレーションのインスタンスは次の場所で実行されています。:
 
 ```
 https://tree-contentful-integration.now.sh
 ```
 
-If you want to use this integration with a predefined Contentful entry, simply provide them in the URL of your integration's UI Hook:
+事前定義されたContentfulエントリでこのインテグレーションを使用する場合は、インテグレーションのUIフックのURLでそれらを指定するだけです。
 
 ```
 https://tree-contentful-integration.now.sh?\
