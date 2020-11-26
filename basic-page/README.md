@@ -1,6 +1,6 @@
 # Treeインテグレーション: 基本のページ
 
-A [UI Hook](https://treedocs.now.sh/docs/v1/hooks/ui/introduction/) serving a page with static [blocks](https://treedocs.now.sh/docs/v1/blocks/basic/).
+静的[ブロック](https://treedocs.now.sh/docs/v1/blocks/basic/)でページを提供する[UIフック](https://treedocs.now.sh/docs/v1/hooks/ui/introduction/)。
 
 ## 前提条件
 
