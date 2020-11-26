@@ -1,8 +1,8 @@
-# Tree Integration: Today's Agenda
+# Treeインテグレーション: 本日のアジェンダ
 
-This example demonstrates how to fetch events from a user's Google Calendar via OAuth 2.0.
+この例は、OAuth2.0を介してユーザーのGoogleカレンダーからイベントを取得する方法を示しています。
 
-## Prerequisites
+## 前提条件
 
 - [Node.js](https://nodejs.org)
 - [Now CLI](https://zeit.co/download)
@@ -10,44 +10,42 @@ This example demonstrates how to fetch events from a user's Google Calendar via 
 - [Google OAuth Client Setup](https://console.developers.google.com)
 - [FaunaDB](https://dashboard.fauna.com)
 
-## Run Locally
+## ローカルで実行
 
-Create a `.env` file with the variables specified in the `now.json` using the appropriate values
-configured on the Google developer console and FaunaDB.
+Google Developer ConsoleとFaunaDBで構成された適切な値を使用して、 `now.json`で指定された変数を使用して` .env`ファイルを作成します。
 
-Then run this UI Hook locally with:
+次に、このUIフックをローカルで実行します。:
 
 ```bash
 now dev
 ```
 
-Then create a tunnel to localhost on port 3000 using ngrok:
+次に、ngrokを使用してポート3000でローカルホストへのトンネルを作成します。:
 
 ```bash
 ngrok http 3000
 ```
 
-Take note of the forwarding URL created by ngrok (ending in ".ngrok.io").
+ngrokによって作成された転送URL（「.ngrok.io」で終わる）をメモしておいてください。
 
-Then create a [Tree Integration](https://treedocs.now.sh/docs/v1/getting-started/) and set the UI Hook URL to the ngrok forwarding URL.
+次に、[Treeインテグレーション](https://treedocs.now.sh/docs/v1/getting-started/)を作成し、UIフックURLをngrok転送URLに設定します。
 
-You can now log in to the Tree mobile app and see your Integration in action.
+これで、Treeモバイルアプリにログインして、インテグレーションの動作を確認できます。
 
-## Deploying to Now
+## 今すぐ展開
 
-Add the secrets (values starting with `@`) referenced in `now.json`.
+`now.json`で参照されるシークレット（`@`で始まる値）を追加します。
 
 ```bash
 now secrets add @<secret-name> <secret-value>
 ```
 
-Then deploy to Now, following the user prompts:
+次に、ユーザープロンプトに従って、Nowにデプロイします。：
 
 ```bash
 now
 ```
 
-## License
+## ライセンス
 
-The Tree documentation is an open source project released under the [MIT
-License](https://github.com/treelabs/integrations/blob/master/LICENSE.md).
+Treeドキュメントは、[MITLicense](https://github.com/treelabs/integrations/blob/master/LICENSE.md)の下でリリースされたオープンソースプロジェクトです。
