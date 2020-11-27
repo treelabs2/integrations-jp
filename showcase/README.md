@@ -1,6 +1,6 @@
 # Treeインテグレーション: ショーケース
 
-A [UI Hook](https://treedocs.vercel.app//docs/v1/hooks/ui/introduction/) to showcase Blocks, Props, Actions, and Operators.
+ブロック、プロップ、アクション、および演算子を紹介する[UIフック](https://treedocs.vercel.app//docs/v1/hooks/ui/introduction/)。
 
 ## 前提条件
 
