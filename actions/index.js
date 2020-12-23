@@ -10,7 +10,7 @@ const page = {
     blocks: [
         {
             type: 'button',
-            value: 'Notify',
+            value: '通知',
             attrs: {
                 onClick: {
                     action: 'notify',
@@ -23,7 +23,7 @@ const page = {
         },
         {
             type: 'button',
-            value: 'Open URL',
+            value: 'URLを開く',
             attrs: {
                 onClick: {
                     action: 'open',
@@ -35,7 +35,7 @@ const page = {
         },
         {
             type: 'button',
-            value: 'Open Page',
+            value: 'ページを開く',
             attrs: {
                 onClick: {
                     action: 'open',
@@ -47,7 +47,7 @@ const page = {
         },
         {
             type: 'button',
-            value: 'Counter ${prop("counter")}',
+            value: 'カウンター ${prop("counter")}',
             attrs: {
                 onClick: {
                     action: 'updateProps',
@@ -64,7 +64,7 @@ const page = {
         },
         {
             type: 'button',
-            value: 'Fetch Photos',
+            value: '写真を取得',
             attrs: {
                 onClick: {
                     action: 'fetch',
@@ -74,7 +74,7 @@ const page = {
                     onSuccess: {
                         action: 'notify',
                         payload: {
-                            message: 'Success: got ${length(response)} results.'
+                            message: '成功: got ${length(response)} results.'
                         }
                     },
                     onError: {
@@ -88,26 +88,26 @@ const page = {
         },
         {
             type: 'button',
-            value: 'Ping',
+            value: 'ピン',
             attrs: {
                 onClick: {
                     action: 'post',
                     payload: {
                         url: 'https://httpbin.org/post',
                         params: {
-                            message: 'Ping'
+                            message: 'ピン'
                         }
                     },
                     onSuccess: {
                         action: 'notify',
                         payload: {
-                            message: 'Success. Got back: ${get(get(response, "json"), "message")}.'
+                            message: '成功。 Got back: ${get(get(response, "json"), "message")}.'
                         }
                     },
                     onError: {
                         action: 'notify',
                         payload: {
-                            message: 'Error: ${get(error, "message")}'
+                            message: 'エラー: ${get(error, "message")}'
                         }
                     }
                 }
@@ -118,7 +118,7 @@ const page = {
             value: 'https://source.unsplash.com/800x600/?forest',
             attrs: {
                 format: 'landscape',
-                caption: 'Images can also perform actions on click.',
+                caption: '画像はクリック時にアクションを実行することもできます。',
                 onClick: {
                     action: 'open',
                     payload: {
