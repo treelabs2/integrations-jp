@@ -62,7 +62,7 @@ var app = http.createServer(function (req, res) {
                 },
                 {
                     type: 'button',
-                    value: 'Submit',
+                    value: '参加',
                     attrs: {
                         onClick: {
                             action: 'post',
@@ -76,13 +76,13 @@ var app = http.createServer(function (req, res) {
                             onSuccess: {
                                 action: 'notify',
                                 payload: {
-                                    message: 'Success. Response: ${response}.'
+                                    message: '成功。応答: ${response}.'
                                 }
                             },
                             onError: {
                                 action: 'notify',
                                 payload: {
-                                    message: 'Error: ${get(error, "message")}'
+                                    message: 'エラー: ${get(error, "message")}'
                                 }
                             }
                         }
