@@ -24,30 +24,30 @@ var app = http.createServer(function (req, res) {
             },
             {
                 type: 'heading1',
-                value: 'Welcome'
+                value: 'ようこそ'
             },
             {
                 type: 'text',
-                value: 'Your first page!'
+                value: '最初のページです!'
             },
             {
                 type: 'bulletedlist',
-                value: ['With', 'Bullet', 'Points']
+                value: ['With', 'Bullet', 'ポイント']
             },
             {
                 type: 'divider'
             },
             {
                 type: 'quote',
-                value: 'And a quote'
+                value: '引用'
             },
             {
                 type: 'heading3',
-                value: 'A section heading'
+                value: 'セクション見出し'
             },
             {
                 type: 'text',
-                value: 'And some longer text spanning across multiple lines.'
+                value: 'そして、複数の行にまたがるいくつかの長い文章。'
             }
         ]
     };
