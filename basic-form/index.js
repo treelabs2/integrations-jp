@@ -14,7 +14,7 @@ var app = http.createServer(function (req, res) {
     
     if (req.method !== 'POST') {
         res.writeHead(404, {'Content-Type': 'text/plain'});
-        res.write('Not found');
+        res.write('ページが見つかりません。');
         res.end();
     }
 
@@ -50,14 +50,14 @@ var app = http.createServer(function (req, res) {
                     type: 'input',
                     bindToProp: 'firstName',
                     attrs: {
-                        label: 'First name'
+                        label: '名'
                     }
                 },
                 {
                     type: 'input',
                     bindToProp: 'lastName',
                     attrs: {
-                        label: 'Last name'
+                        label: '姓'
                     }
                 },
                 {
