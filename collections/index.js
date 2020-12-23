@@ -8,19 +8,19 @@ const page = {
             value: {
                 items: [
                     {
-                        title: 'Forest',
+                        title: '森',
                         photo: 'https://source.unsplash.com/800x600/?forest',
                     },
                     {
-                        title: 'Beach',
+                        title: '海',
                         photo: 'https://source.unsplash.com/800x600/?beach',
                     },
                     {
-                        title: 'Mountain',
+                        title: '山',
                         photo: 'https://source.unsplash.com/800x600/?mountain',
                     },
                     {
-                        title: 'Desert',
+                        title: '砂漠',
                         photo: 'https://source.unsplash.com/800x600/?desert',
                     }
                 ]
@@ -30,7 +30,7 @@ const page = {
     blocks: [
         {
             type: 'heading2',
-            value: 'Async Fetch'
+            value: '非同期フェッチ'
         },
         {
             type: 'collection',
@@ -49,13 +49,13 @@ const page = {
                         },
                         {
                             type: 'button',
-                            value: 'Join',
+                            value: '参加',
                             attrs: {
                                 fill: true,
                                 onClick: {
                                     action: 'notify',
                                     payload: {
-                                        message: "Joined!"
+                                        message: "参加しました！"
                                     }
                                 }
                             }
@@ -69,7 +69,7 @@ const page = {
         },
         {
             type: 'heading2',
-            value: 'Async Fetch'
+            value: '非同期フェッチ'
         },
         {
             type: 'collection',
@@ -86,7 +86,7 @@ const page = {
                             value: '${get(item, "download_url")}',
                             attrs: {
                                 format: 'square',
-                                caption: 'Author: ${get(item, "author")}',
+                                caption: '著者: ${get(item, "author")}',
                             }
                         },
                     ]
@@ -98,26 +98,26 @@ const page = {
         },
         {
             type: 'heading2',
-            value: 'Button Grid'
+            value: 'ボタングリッド'
         },
         {
             type: 'collection',
             value: {
                 items: [
                     {
-                        label: 'Action 1',
+                        label: 'アクション 1',
                         pageId: '1'
                     },
                     {
-                        label: 'Action 2',
+                        label: 'アクション 2',
                         pageId: '2'
                     },
                     {
-                        label: 'Action 3',
+                        label: 'アクション 3',
                         pageId: '3'
                     },
                     {
-                        label: 'Action 4',
+                        label: 'アクション 4',
                         pageId: '4'
                     }
                 ],
@@ -143,7 +143,7 @@ const page = {
         },
         {
             type: 'heading2',
-            value: 'List View'
+            value: 'リストビュー'
         },
         {
             type: 'collection',
@@ -165,7 +165,7 @@ const page = {
                         },
                         {
                             type: 'link',
-                            value: 'See more →',
+                            value: 'さらに見る →',
                             attrs: {
                                 url: '${get(item, "photo")}'
                             }
