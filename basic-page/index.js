@@ -32,7 +32,7 @@ var app = http.createServer(function (req, res) {
             },
             {
                 type: 'bulletedlist',
-                value: ['With', 'Bullet', 'ポイント']
+                value: ['箇条書き１', '箇条書き２', '箇条書き３']
             },
             {
                 type: 'divider'
