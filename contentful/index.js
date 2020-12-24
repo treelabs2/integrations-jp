@@ -219,16 +219,16 @@ const renderForm = (spaceId, accessToken, entryId) => {
             { name: 'entry_id', type: 'text', value: entryId }
         ],
         blocks: [
-            { type: 'heading1', value: 'Welcome!' },
-            { type: 'text', value: 'This Integration is backed by [Contentful](https://app.contentful.com/), which is a CMS (Content Managment System) that allows you to create rich pages to be displayed. In order to get started, please provide the information below. Follow our [Contentful guide](https://www.notion.so/withtree/Contentful-a473d6ae70254bbba6e79a89970546a3) to get started.' },
-            { type: 'heading3', value: 'Contentful Configuration'  },
-            { type: 'input', bindToProp: 'space_id', value: spaceId, attrs: { label: 'Space ID', placeholder: 'Hidden', display_type: 'legend' }},
-            { type: 'input', bindToProp: 'access_token', value: accessToken, attrs: { label: 'Access Token', placeholder: 'Hidden', display_type: 'legend' }},
-            { type: 'input', bindToProp: 'entry_id', value: entryId, attrs: { label: 'Entry ID', placeholder: 'Hidden', display_type: 'legend' }},
-            { type: 'text', value: '👉 [How do I find these values?](https://www.notion.so/withtree/Contentful-a473d6ae70254bbba6e79a89970546a3#ce259e32a41c4e1da13e23790396a45c)', attrs: {size: 'small', appearance: 'light' }},
+            { type: 'heading1', value: 'ようこそ!' },
+            { type: 'text', value: 'このインテグレーションは、表示するリッチページを作成できるCMS（コンテンツ管理システム）である[Contentful](https://app.contentful.com/)によって支えられています。 開始するには、以下の情報を提供してください。 [コンテンツガイド](https://www.notion.so/withtree/Contentful-a473d6ae70254bbba6e79a89970546a3)に従って開始してください。' },
+            { type: 'heading3', value: 'Contentful構成'  },
+            { type: 'input', bindToProp: 'space_id', value: spaceId, attrs: { label: 'スペース ID', placeholder: '隠す', display_type: 'legend' }},
+            { type: 'input', bindToProp: 'access_token', value: accessToken, attrs: { label: 'アクセストークン', placeholder: '隠す', display_type: 'legend' }},
+            { type: 'input', bindToProp: 'entry_id', value: entryId, attrs: { label: 'エントリー ID', placeholder: '隠す', display_type: 'legend' }},
+            { type: 'text', value: '👉 [これらの値を見つけるにはどうすればよいですか?](https://www.notion.so/withtree/Contentful-a473d6ae70254bbba6e79a89970546a3#ce259e32a41c4e1da13e23790396a45c)', attrs: {size: 'small', appearance: 'light' }},
             { type: 'spacer' },
-            { type: 'button', value: 'Submit', attrs: { action: 'submit', disabled: false }},
-            { type: 'text', value: 'Note: as a user with Full Access permissions, you can update this information at any time. Just tap the "⚙️ Configure Integration" link at the bottom of the main page.', attrs: {size: 'small', appearance: 'light' }}
+            { type: 'button', value: '参加', attrs: { action: 'submit', disabled: false }},
+            { type: 'text', value: '注：フルアクセス権限を持つユーザーは、いつでもこの情報を更新できます。 メインページの下部にある 「⚙️ インテグレーションの構成」 リンクをタップしてください。', attrs: {size: 'small', appearance: 'light' }}
         ]
     };
 }
@@ -236,7 +236,7 @@ const renderForm = (spaceId, accessToken, entryId) => {
 const getSettingsBlocks = () => {
     return [
         { type: 'divider' },
-        { type: 'link', value: '⚙️ Configure Integration', attrs: { pageId: PAGE_ID_SETTINGS }}
+        { type: 'link', value: '⚙️ インテグレーション構成', attrs: { pageId: PAGE_ID_SETTINGS }}
     ];
 }
 
