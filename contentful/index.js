@@ -12,7 +12,7 @@ const PAGE_ID_SETTINGS = 'settings';
 const handler = async (req, res) => {
     // Only accept POST requests
     if (req.method !== 'POST') {
-        return sendMessage(res, 404, 'Page not found.');
+        return sendMessage(res, 404, 'ページが見つかりません。');
     }
 
     const { query } = parse(req.url, true);
@@ -20,23 +20,23 @@ const handler = async (req, res) => {
     const payload = await json(req);
 
     if (!hasAccess(payload)) {
-        return sendMessage(res, 403, 'You do not have access to this content.');
+        return sendMessage(res, 403, 'このコンテンツにアクセスすることはできません。');
     }
 
     const isAdmin = get(payload, 'permissions', []).includes('full_access');
     const installationId = payload.installation_id;
 
     if (!installationId) {
-        return sendMessage(res, 400, 'No Installation ID provided.')
+        return sendMessage(res, 400, 'インストールIDは提供されていません。')
     }
 
     if (payload.action === 'submit') {
         try {
             const { contentfulSpaceId, contentfulAccessToken, contentfulEntryId } = parseActionProps(payload);
             await saveConfiguration(installationId, contentfulSpaceId, contentfulAccessToken, contentfulEntryId);
-            return sendRedirect(res, null, 'Configuration has been saved.');
+            return sendRedirect(res, null, '構成が保存されました。');
         } catch (error) {
-            return sendNotification(res, `Error saving configuration. ${defaultTo(error.message, '')}`);
+            return sendNotification(res, `構成の保存中にエラーが発生しました。 ${defaultTo(error.message, '')}`);
         }
     }
 
@@ -61,7 +61,7 @@ const handler = async (req, res) => {
         if (isAdmin) {
             return sendPage(res, 200, renderForm());
         } else {
-            return sendMessage(res, 403, 'You do not have access to this content.');
+            return sendMessage(res, 403, 'このコンテンツにアクセスすることはできません。');
         }
     }
 
@@ -79,7 +79,7 @@ const handler = async (req, res) => {
     try {
         const page = await parseContentfulEntry(entry);
         if (isAdmin && isEntryPage && !isConfigured) {
-            // Append settings button on main page for admins
+            // 管理者用のメインページに設定ボタンを追加
             page.blocks = page.blocks.concat(getSettingsBlocks());
         }
         return sendPage(res, 200, page);
@@ -108,7 +108,7 @@ const sendNeedsConfiguration = (res, isAdmin) => {
     if (isAdmin) {
         sendPage(res, 200, renderForm());
     } else {
-        sendMessage(res, 501, 'This integration is not yet configured. This can only be done by someone with Full Access permissions.');
+        sendMessage(res, 501, 'このインテグレーションはまだ構成されていません。 これは、フルアクセス権限を持つユーザーのみが実行できます。');
     }
 }
 
@@ -116,7 +116,7 @@ const sendNotFound = (res, isEntryPage, isAdmin) => {
     if (isAdmin && isEntryPage) {
         return sendPage(res, 200, renderForm());
     }
-    return sendMessage(res, 404, 'Page not found.');
+    return sendMessage(res, 404, 'ページが見つかりません。');
 }
 
 const getContentfulClient = async (installationId, query) => {
@@ -201,7 +201,7 @@ const parseActionProps = (payload) => {
         missingProps.push('Entry ID');
     }
     if (missingProps.length > 0) {
-        throw new Error(`Please provide the following: ${missingProps.join(', ')}.`);
+        throw new Error(`次のものを提供してください: ${missingProps.join(', ')}.`);
     }
     return { contentfulSpaceId, contentfulAccessToken, contentfulEntryId };
 }
@@ -212,7 +212,7 @@ const getPropValue = (props, name) => {
 
 const renderForm = (spaceId, accessToken, entryId) => {
     return {
-        title: 'Settings',
+        title: 'セッティング',
         props: [
             { name: 'space_id', type: 'text', value: spaceId },
             { name: 'access_token', type: 'text', value: accessToken },
