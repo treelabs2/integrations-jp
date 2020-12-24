@@ -10,7 +10,7 @@ const cachedClients = {};
 const PAGE_ID_SETTINGS = 'settings';
 
 const handler = async (req, res) => {
-    // POSTリクエストのみを受け入れます
+    // Only accept POST requests
     if (req.method !== 'POST') {
         return sendMessage(res, 404, 'ページが見つかりません。');
     }
