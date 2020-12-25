@@ -3,29 +3,29 @@ exports.page = {
     blocks: [
         {
             type: 'heading2',
-            value: 'Basic Blocks'
+            value: 'Basic Blocks基本のブロック'
         },
         {
             type: 'divider'
         },
         {
             type: 'heading3',
-            value: 'Text'
+            value: 'Textテキスト'
         },
         {
             type: 'text',
-            value: 'Text'
+            value: 'Textテキスト'
         },
         {
             type: 'text',
-            value: 'Light text',
+            value: 'Light text軽いテキスト',
             attrs: {
                 appearance: 'light'
             }
         },
         {
             type: 'text',
-            value: 'Danger text',
+            value: 'Danger text危険テキスト',
             attrs: {
                 appearance: 'danger'
             }
@@ -35,11 +35,11 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Headings'
+            value: 'Headings見出し'
         },
         {
             type: 'heading1',
-            value: 'Big and small'
+            value: 'Big and small大と小'
         },
         {
             type: 'divider'
