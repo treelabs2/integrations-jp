@@ -46,61 +46,61 @@ exports.page = {
         },
         {
             type: 'bulletedlist',
-            value: [ 'Bullet', 'Lists']
+            value: [ 'Bullet箇条書き１', 'Lists箇条書き２']
         },
         {
             type: 'numberedlist',
-            value: [ 'Numbered', 'Lists']
+            value: [ 'Numbered数字付きリスト１', 'Lists数字付きリスト２']
         },
         {
             type: 'quote',
-            value: 'Alone we go fast, together we go far.'
+            value: 'Alone we go fast, together we go far.一人で速く行き、一緒に遠くへ行きます。'
         },
         {
             type: 'divider'
         },
         {
             type: 'heading3',
-            value: 'Callouts'
+            value: 'Callouts吹き出し'
         },
         {
             type: 'callout',
-            value: 'This is an note with an info message.',
+            value: 'This is an note with an info message.これはインフォメッセージ付きのメモです。',
             attrs: {
                 type: 'info'
             }
         },
         {
             type: 'callout',
-            value: 'This is an note with a success message.',
+            value: 'This is an note with a success message.これはサクセスメッセージ付きのメモです。',
             attrs: {
                 type: 'success'
             }
         },
         {
             type: 'callout',
-            value: 'This is an note with a warning message.',
+            value: 'This is an note with a warning message.これは警告メッセージ付きのメモです。',
             attrs: {
                 type: 'warning'
             }
         },
         {
             type: 'callout',
-            value: 'This is an note with an error message.',
+            value: 'This is an note with an error message.これはエラーメッセージ付きのメモです。',
             attrs: {
                 type: 'error'
             }
         },
         {
             type: 'callout',
-            value: 'This is an note with a ~~custom icon~~ and **Markdown**.',
+            value: 'This is an note with a ~~custom icon~~ and **Markdown**.これは ~~カスタムアイコン~~ と **マークダウン** が付いたメモです。',
             attrs: {
                 iconUrl: 'https://img.icons8.com/color/48/000000/accessibility2--v1.png'
             }
         },
         {
             type: 'callout',
-            value: 'This is a note with small text.',
+            value: 'This is a note with small text.これは小さなテキストのメモです。',
             attrs: {
                 type: 'info',
                 small: true
@@ -111,7 +111,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Code'
+            value: 'Codeコード'
         },
         {
             type: 'code',
@@ -122,18 +122,18 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Links'
+            value: 'Linksリンク'
         },
         {
             type: 'link',
-            value: 'Plain Link',
+            value: 'Plain Linkプレーンなリンク',
             attrs: {
                 pageId: 'welcome'
             }
         },
         {
             type: 'link',
-            value: 'Link with Custom Icon',
+            value: 'Link with Custom Icon カスタムアイコンとリンク',
             attrs: {
                 url: 'https://withtree.com',
                 iconUrl: 'https://img.icons8.com/color/48/000000/gallery.png'
@@ -141,7 +141,7 @@ exports.page = {
         },
         {
             type: 'link',
-            value: 'Large Link with Image',
+            value: 'Large Link with Image　画像付きの大きなリンク',
             attrs: {
                 url: 'https://withtree.com',
                 size: 'large',
@@ -151,7 +151,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Button Link',
+            value: 'Button Link　ボタンリンク',
             attrs: {
                 onClick: {
                     action: 'open',
