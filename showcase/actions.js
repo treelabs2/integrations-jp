@@ -8,11 +8,11 @@ exports.page = {
     blocks: [
         {
             type: 'heading2',
-            value: 'Actions',
+            value: 'Actionsアクション',
         },
         {
             type: 'link',
-            value: 'Documentation: Actions →',
+            value: 'Documentation: Actions →ドキュメント：アクション→',
             attrs: {
                 url: 'https://treedocs.now.sh/docs/v1/hooks/ui/actions/'
             }
@@ -37,8 +37,8 @@ exports.page = {
               {
             type: 'input',
             attrs: {
-                placeholder: 'Enter your name',
-                label: 'Name',
+                placeholder: 'Enter your name　名前を入力してください。',
+                label: 'Name　名前',
                 capitalize: 'characters'
             }
         },
@@ -46,7 +46,7 @@ exports.page = {
             type: 'input',
             value: '123456',
             attrs: {
-                label: 'Password',
+                label: 'Password　パスワード',
                 secure: true
             }
         },
@@ -95,7 +95,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Notify',
+            value: 'Notify　通知',
             attrs: {
                 onClick: {
                     action: 'notify',
@@ -108,7 +108,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Open URL',
+            value: 'Open URL　オープンURL',
             attrs: {
                 onClick: {
                     action: 'open',
@@ -120,7 +120,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Open Page',
+            value: 'Open Page　オープンページ',
             attrs: {
                 onClick: {
                     action: 'open',
@@ -173,7 +173,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Send POST Request',
+            value: 'Send POST Request　POSTリクエストを送信する',
             attrs: {
                 onClick: {
                     action: 'post',
