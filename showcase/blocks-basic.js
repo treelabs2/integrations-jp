@@ -3,29 +3,29 @@ exports.page = {
     blocks: [
         {
             type: 'heading2',
-            value: 'Basic Blocks基本のブロック'
+            value: '基本のブロック'
         },
         {
             type: 'divider'
         },
         {
             type: 'heading3',
-            value: 'Textテキスト'
+            value: 'テキスト'
         },
         {
             type: 'text',
-            value: 'Textテキスト'
+            value: 'テキスト'
         },
         {
             type: 'text',
-            value: 'Light text軽いテキスト',
+            value: '軽いテキスト',
             attrs: {
                 appearance: 'light'
             }
         },
         {
             type: 'text',
-            value: 'Danger text危険テキスト',
+            value: '危険テキスト',
             attrs: {
                 appearance: 'danger'
             }
@@ -35,72 +35,72 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Headings見出し'
+            value: '見出し'
         },
         {
             type: 'heading1',
-            value: 'Big and small大と小'
+            value: '大と小'
         },
         {
             type: 'divider'
         },
         {
             type: 'bulletedlist',
-            value: [ 'Bullet箇条書き１', 'Lists箇条書き２']
+            value: [ '箇条書き１', '箇条書き２']
         },
         {
             type: 'numberedlist',
-            value: [ 'Numbered数字付きリスト１', 'Lists数字付きリスト２']
+            value: [ '数字付きリスト１', '数字付きリスト２']
         },
         {
             type: 'quote',
-            value: 'Alone we go fast, together we go far.一人で速く行き、一緒に遠くへ行きます。'
+            value: '一人で速く行き、一緒に遠くへ行きます。'
         },
         {
             type: 'divider'
         },
         {
             type: 'heading3',
-            value: 'Callouts吹き出し'
+            value: '吹き出し'
         },
         {
             type: 'callout',
-            value: 'This is an note with an info message.これはインフォメッセージ付きのメモです。',
+            value: 'これはインフォメッセージ付きのメモです。',
             attrs: {
                 type: 'info'
             }
         },
         {
             type: 'callout',
-            value: 'This is an note with a success message.これはサクセスメッセージ付きのメモです。',
+            value: 'これはサクセスメッセージ付きのメモです。',
             attrs: {
                 type: 'success'
             }
         },
         {
             type: 'callout',
-            value: 'This is an note with a warning message.これは警告メッセージ付きのメモです。',
+            value: 'これは警告メッセージ付きのメモです。',
             attrs: {
                 type: 'warning'
             }
         },
         {
             type: 'callout',
-            value: 'This is an note with an error message.これはエラーメッセージ付きのメモです。',
+            value: 'これはエラーメッセージ付きのメモです。',
             attrs: {
                 type: 'error'
             }
         },
         {
             type: 'callout',
-            value: 'This is an note with a ~~custom icon~~ and **Markdown**.これは ~~カスタムアイコン~~ と **マークダウン** が付いたメモです。',
+            value: 'これは ~~カスタムアイコン~~ と **マークダウン** が付いたメモです。',
             attrs: {
                 iconUrl: 'https://img.icons8.com/color/48/000000/accessibility2--v1.png'
             }
         },
         {
             type: 'callout',
-            value: 'This is a note with small text.これは小さなテキストのメモです。',
+            value: 'これは小さなテキストのメモです。',
             attrs: {
                 type: 'info',
                 small: true
@@ -111,7 +111,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Codeコード'
+            value: 'コード'
         },
         {
             type: 'code',
@@ -122,18 +122,18 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Linksリンク'
+            value: 'リンク'
         },
         {
             type: 'link',
-            value: 'Plain Linkプレーンなリンク',
+            value: 'プレーンなリンク',
             attrs: {
                 pageId: 'welcome'
             }
         },
         {
             type: 'link',
-            value: 'Link with Custom Icon カスタムアイコンとリンク',
+            value: 'カスタムアイコンとリンク',
             attrs: {
                 url: 'https://withtree.com',
                 iconUrl: 'https://img.icons8.com/color/48/000000/gallery.png'
@@ -141,17 +141,17 @@ exports.page = {
         },
         {
             type: 'link',
-            value: 'Large Link with Image　画像付きの大きなリンク',
+            value: '画像付きの大きなリンク',
             attrs: {
                 url: 'https://withtree.com',
                 size: 'large',
-                subtitle: 'Available in 10 min',
+                subtitle: '10分で利用可能',
                 iconUrl: 'https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80'
             }
         },
         {
             type: 'button',
-            value: 'Button Link　ボタンリンク',
+            value: 'ボタンリンク',
             attrs: {
                 onClick: {
                     action: 'open',
