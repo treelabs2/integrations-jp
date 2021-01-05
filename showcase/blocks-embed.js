@@ -10,7 +10,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Google Map'
+            value: 'Googleマップ'
         },
         {
             type: 'googlemap',
