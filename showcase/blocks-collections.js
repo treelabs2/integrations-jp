@@ -7,19 +7,19 @@ exports.page = {
             value: {
                 items: [
                     {
-                        title: 'Forest',
+                        title: '森',
                         photo: 'https://source.unsplash.com/800x600/?forest',
                     },
                     {
-                        title: 'Beach',
+                        title: '海',
                         photo: 'https://source.unsplash.com/800x600/?beach',
                     },
                     {
-                        title: 'Mountain',
+                        title: '山',
                         photo: 'https://source.unsplash.com/800x600/?mountain',
                     },
                     {
-                        title: 'Desert',
+                        title: '砂漠',
                         photo: 'https://source.unsplash.com/800x600/?desert',
                     }
                 ]
@@ -29,14 +29,14 @@ exports.page = {
     blocks: [
         {
             type: 'heading2',
-            value: 'Collections'
+            value: 'コレクション'
         },
         {
             type: 'divider',
         },
         {
             type: 'heading3',
-            value: 'Gallery View'
+            value: 'ギャラリービュー'
         },
         {
             type: 'collection',
@@ -81,7 +81,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'List View'
+            value: 'リストビュー'
         },
         {
             type: 'collection',
@@ -107,7 +107,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Async Data Sources'
+            value: '非同期データソース'
         },
         {
             type: 'collection',
@@ -135,7 +135,7 @@ exports.page = {
                                 onClick: {
                                     action: 'notify',
                                     payload: {
-                                        message: "Joined!"
+                                        message: "参加しました!"
                                     }
                                 }
                             }
