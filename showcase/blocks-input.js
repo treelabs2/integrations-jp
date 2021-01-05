@@ -5,14 +5,14 @@ exports.page = {
                     type: 'input',
                     bindToProp: 'firstName',
                     attrs: {
-                        label: 'First name'
+                        label: '名前'
                     }
                 },
                 {
                     type: 'input',
                     bindToProp: 'lastName',
                     attrs: {
-                        label: 'Last name'
+                        label: '苗字'
                     }
                 },
                 {
@@ -52,25 +52,25 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Buttons'
+            value: 'ボタン'
         },
         {
             type: 'button',
-            value: 'Success',
+            value: '成功',
             attrs: {
                 type: 'success'
             }
         },
         {
             type: 'button',
-            value: 'Error',
+            value: 'エラー',
             attrs: {
                 type: 'error'
             }
         },
         {
             type: 'button',
-            value: 'Warning',
+            value: '危険',
             attrs: {
                 type: 'warning'
             }
@@ -84,25 +84,25 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Text',
+            value: 'テキスト',
             attrs: {
                 type: 'text'
             }
         },
         {
             type: 'button',
-            value: 'Disabled',
+            value: '無効',
             attrs: {
                 disabled: true
             }
         },
         {
             type: 'heading4',
-            value: 'Sizes'
+            value: 'サイズ'
         },
         {
             type: 'button',
-            value: 'Small',
+            value: '小',
             attrs: {
                 type: 'success',
                 size: 'small'
@@ -110,7 +110,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Normal',
+            value: '中',
             attrs: {
                 type: 'success',
                 size: 'normal'
@@ -118,7 +118,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Large',
+            value: '大',
             attrs: {
                 type: 'success',
                 size: 'large'
@@ -129,7 +129,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Input'
+            value: '入力'
         },
         {
             type: 'input',
@@ -149,7 +149,7 @@ exports.page = {
         },
         {
             type: 'input',
-            value: 'Disabled',
+            value: '無効',
             attrs: {
                 label: 'Status',
                 disabled: true
@@ -157,7 +157,7 @@ exports.page = {
         },
         {
             type: 'heading4',
-            value: 'Comment'
+            value: 'コメント'
         },
         {
             type: 'input',
@@ -168,7 +168,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Select'
+            value: '選択'
         },
         {
             type: 'singleselect',
@@ -187,11 +187,11 @@ exports.page = {
             type: 'multiselect',
             value: {
                 items: [
-                    'Hanoi',
-                    'Cairo',
-                    'Los Angeles',
-                    'San Francisco',
-                    'Paris'
+                    'ハノイ',
+                    'カイロ',
+                    'ロサンゼルス',
+                    'サンフランシスコ',
+                    'パリ'
                 ]
             },
             attrs: {
