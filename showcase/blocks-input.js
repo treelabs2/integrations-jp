@@ -31,13 +31,13 @@ exports.page = {
                             onSuccess: {
                                 action: 'notify',
                                 payload: {
-                                    message: 'Success. Response: ${response}.'
+                                    message: '成功しました。結果: ${response}.'
                                 }
                             },
                             onError: {
                                 action: 'notify',
                                 payload: {
-                                    message: 'Error: ${get(error, "message")}'
+                                    message: 'エラー: ${get(error, "message")}'
                                 }
                             }
                         }
@@ -174,13 +174,13 @@ exports.page = {
             type: 'singleselect',
             value: {
                 items: [
-                    'Rock',
-                    'Scissor',
-                    'Paper'
+                    'グー',
+                    'チョキ',
+                    'パー'
                 ]
             },
             attrs: {
-                label: 'Select a hand...'
+                label: '何を出しますか？'
             }
         },
         {
@@ -195,7 +195,7 @@ exports.page = {
                 ]
             },
             attrs: {
-                label: 'Select cities...'
+                label: '都市を選んでください...'
             }
         },
         {
@@ -215,7 +215,7 @@ exports.page = {
         {
             type: 'datepicker',
             attrs: {
-                label: 'Pick a date and time range...',
+                label: '日付と時刻の範囲を選択してください...',
                 allowEndDate: true,
                 allowTime: true
             }
@@ -223,7 +223,7 @@ exports.page = {
         {
             type: 'datepicker',
             attrs: {
-                label: 'Pick a single date...',
+                label: '日付を1つ選んでください...',
                 allowEndDate: false,
                 allowTime: false
             }
