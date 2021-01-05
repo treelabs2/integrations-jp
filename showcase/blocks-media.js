@@ -10,14 +10,14 @@ exports.page = {
     blocks: [
         {
             type: 'heading2',
-            value: 'Media'
+            value: 'メディア'
         },
         {
             type: 'divider',
         },
         {
             type: 'heading3',
-            value: 'Image'
+            value: 'イメージ'
         },
         {
             type: 'image',
