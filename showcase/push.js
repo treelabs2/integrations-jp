@@ -147,13 +147,13 @@ exports.page = {
                     onSuccess: {
                         action: 'notify',
                         payload: {
-                            message: 'Success. Got back: ${get(get(response, "json"), "message")}.'
+                            message: '成功しました。: ${get(get(response, "json"), "message")}.'
                         }
                     },
                     onError: {
                         action: 'notify',
                         payload: {
-                            message: 'Error: ${get(error, "message")}'
+                            message: 'エラー: ${get(error, "message")}'
                         }
                     }
                 },
