@@ -12,14 +12,14 @@ exports.page = {
     blocks: [
         {
             type: 'heading2',
-            value: 'QR Codes'
+            value: 'QRコード'
         },
         {
             type: 'divider'
         },
         {
             type: 'heading4',
-            value: 'Randomly Generated'
+            value: 'ランダムに生成'
         },
         {
             type: 'qr',
@@ -30,7 +30,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Generate New',
+            value: '新規生成',
             attrs: {
                 fill: true,
                 onClick: {
@@ -51,7 +51,7 @@ exports.page = {
         },
         {
             type: 'heading4',
-            value: 'Fetched from Remote Endpoint'
+            value: 'リモートエンドポイントから取得'
         },
         {
             type: 'qr',
@@ -62,7 +62,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Generate New',
+            value: '新規生成',
             attrs: {
                 fill: true,
                 onClick: {
