@@ -58,7 +58,7 @@ exports.page = {
     blocks: [
         {
             type: 'heading2',
-            value: 'Operators'
+            value: 'オペレーター'
         },
         {
             type: 'link',
@@ -84,7 +84,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Continue',
+            value: '継続する',
             attrs: {
                 disabled: '${not(prop("accepted"))}',
                 onClick: {
