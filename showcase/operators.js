@@ -155,14 +155,14 @@ exports.page = {
             type: 'input',
             bindToProp: 'name',
             attrs: {
-                placeholder: 'Enter your name',
+                placeholder: '名前を入力してください。',
                 label: 'Name'
             }
         },
         {
             type: 'input',
             attrs: {
-                placeholder: 'Enter a password',
+                placeholder: 'パスワードを入力してください。',
                 label: 'Password',
                 disabled: false,
                 secure: true,
