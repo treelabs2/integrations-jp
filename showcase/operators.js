@@ -1,18 +1,18 @@
-const WEEKDAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-const PHRASE = 'Welcome to Workwell';
+const WEEKDAYS = ['月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日', '日曜日'];
+const PHRASE = 'Workwellへようこそ';
 const ICONS = ['calendar', 'christmas-tree', 'faq'];
 const IMAGES = {
     Mountain: {
         url: 'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
-        caption: 'A beautiful sunrise captured in Verbier, Switzerland.'
+        caption: 'スイスのヴェルビエで撮影された美しい日の出。'
     },
     Forest: {
         url: 'https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-        caption: 'The forests of Mill Valley, California.'
+        caption: 'カリフォルニア州ミルバレーの森。'
     },
     Beach: {
         url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2106&q=80',
-        caption: 'White sand beaches in Punta Cana, Dominican Republic.'
+        caption: 'ドミニカ共和国、プンタカナの白い砂浜。'
     }
 };
 const IMAGE_URLS = Object.keys(IMAGES).map((key) => { return IMAGES[key].url; });
@@ -72,7 +72,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Boolean Operators'
+            value: 'ブール演算子'
         },
         {
             type: 'switch',
@@ -105,7 +105,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Date and Arithmetic Operators'
+            value: '日付と算術演算子'
         },
         {
             type: 'callout',
@@ -116,7 +116,7 @@ exports.page = {
         },
         {
             type: 'heading5',
-            value: 'Event date',
+            value: '開催日',
         },
         {
             type: 'datepicker',
@@ -149,7 +149,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'String Operators'
+            value: '文字列演算子'
         },
         {
             type: 'input',
@@ -170,7 +170,7 @@ exports.page = {
         },
         {
             type: 'input',
-            value: 'Active',
+            value: 'アクティブ',
             attrs: {
                 label: 'Status',
                 disabled: true,
@@ -178,14 +178,14 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Save',
+            value: '保存',
             attrs: {
                 type: 'success',
                 disabled: '${smallerThan(length(prop("name")), 3)}',
                 onClick: {
                     action: 'notify',
                     payload: {
-                        message: 'Saved!',
+                        message: '保存されました!',
                         type: 'success'
                     }
                 }
@@ -193,7 +193,7 @@ exports.page = {
         },
         {
             type: 'text',
-            value: '${if(smallerThan(length(prop("name")), 3), "Please enter a name with at least 3 letters", "Input is OK 👍")}',
+            value: '${if(smallerThan(length(prop("name")), 3), "3文字以上の名前を入力してください", "入力はOKです👍")}',
             attrs: {
                 appearance: 'light',
                 size: 'small'
@@ -204,7 +204,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Array Operators'
+            value: '配列演算子'
         },
         {
             type: 'heading5',
@@ -238,12 +238,12 @@ exports.page = {
             },
             bindToProp: 'icon',
             attrs: {
-                label: 'Select an icon...',
+                label: 'アイコンを選択してください...',
             }
         },
         {
             type: 'link',
-            value: 'My Item',
+            value: 'マイアイテム',
             attrs: {
                 iconUrl: `https://img.icons8.com/color/48/000000/\${elementAt(${JSON.stringify(ICONS)}, prop("icon"))}.png`
             }
@@ -253,7 +253,7 @@ exports.page = {
         },
         {
             type: 'heading5',
-            value: 'Images',
+            value: 'イメージ',
         },
         {
             type: 'singleselect',
@@ -263,7 +263,7 @@ exports.page = {
             },
             bindToProp: 'image',
             attrs: {
-                label: 'Select an image...',
+                label: 'イメージを選択してください...',
             }
         },
         {
