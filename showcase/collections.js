@@ -6,19 +6,19 @@ exports.page = {
             value: {
                 items: [
                     {
-                        title: 'Forest',
+                        title: '森',
                         photo: 'https://source.unsplash.com/800x600/?forest',
                     },
                     {
-                        title: 'Beach',
+                        title: '海',
                         photo: 'https://source.unsplash.com/800x600/?beach',
                     },
                     {
-                        title: 'Mountain',
+                        title: '山',
                         photo: 'https://source.unsplash.com/800x600/?mountain',
                     },
                     {
-                        title: 'Desert',
+                        title: '砂漠',
                         photo: 'https://source.unsplash.com/800x600/?desert',
                     }
                 ]
@@ -28,11 +28,11 @@ exports.page = {
     blocks: [
         {
             type: 'heading2',
-            value: 'Collections'
+            value: 'コレクション'
         },
         {
             type: 'link',
-            value: 'Documentation: Collections →',
+            value: 'ドキュメント：コレクション→',
             attrs: {
                 url: 'https://treedocs.vercel.app//docs/v1/blocks/collection/'
             }
@@ -42,7 +42,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Fixed Items'
+            value: '修正項目'
         },
         {
             type: 'collection',
@@ -61,13 +61,13 @@ exports.page = {
                         },
                         {
                             type: 'button',
-                            value: 'Join',
+                            value: '参加',
                             attrs: {
                                 fill: true,
                                 onClick: {
                                     action: 'notify',
                                     payload: {
-                                        message: "Joined!"
+                                        message: "参加しました!"
                                     }
                                 }
                             }
@@ -81,7 +81,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Async Fetch'
+            value: '非同期フェッチ'
         },
         {
             type: 'collection',
@@ -110,7 +110,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Button Grid'
+            value: 'ボタングリッド'
         },
         {
             type: 'collection',
@@ -155,7 +155,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'List View'
+            value: 'リストビュー'
         },
         {
             type: 'collection',
@@ -177,7 +177,7 @@ exports.page = {
                         },
                         {
                             type: 'link',
-                            value: 'See more →',
+                            value: 'もっと見る →',
                             attrs: {
                                 url: '${get(item, "photo")}'
                             }
