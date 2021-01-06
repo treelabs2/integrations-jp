@@ -78,7 +78,7 @@ const page = {
                 onClick: {
                     action: 'notify',
                     payload: {
-                        message: 'Terms accepted at ${format(now(), "HH:mm")}',
+                        message: '${format(now(), "HH:mm")で条件を受理しました。}',
                         type: 'success'
                     }
                 }
