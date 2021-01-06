@@ -40,11 +40,11 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Examples',
+            value: '例',
         },
         {
             type: 'link',
-            value: 'Blocks Gallery',
+            value: 'ブロックギャラリー',
             attrs: {
                 pageId: 'blocks',
                 iconUrl: 'https://img.icons8.com/color/48/000000/stack-of-photos.png'
@@ -52,7 +52,7 @@ exports.page = {
         },
         {
             type: 'link',
-            value: 'PUSHTEST',
+            value: 'プッシュテスト',
             attrs: {
                 pageId: 'push',
                 iconUrl: 'https://img.icons8.com/color/48/000000/stack-of-photos.png'
@@ -60,7 +60,7 @@ exports.page = {
         },
         {
             type: 'link',
-            value: 'QR Code',
+            value: 'QRコード',
             attrs: {
                 pageId: 'qr',
                 iconUrl: 'https://img.icons8.com/color/48/000000/qr-code.png'
