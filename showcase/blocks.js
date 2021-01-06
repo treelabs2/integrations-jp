@@ -3,11 +3,11 @@ exports.page = {
     blocks: [
         {
             type: 'heading2',
-            value: 'Blocks'
+            value: 'ブロック'
         },
         {
             type: 'link',
-            value: 'Basic',
+            value: 'ベーシック',
             attrs: {
                 pageId: 'blocks-basic',
                 iconUrl: 'https://img.icons8.com/color/48/000000/text-color.png'
@@ -15,7 +15,7 @@ exports.page = {
         },
         {
             type: 'link',
-            value: 'Input',
+            value: '入力',
             attrs: {
                 pageId: 'blocks-input',
                 iconUrl: 'https://img.icons8.com/color/48/000000/rename.png'
@@ -23,7 +23,7 @@ exports.page = {
         },
         {
             type: 'link',
-            value: 'Collections',
+            value: 'コレクション',
             attrs: {
                 pageId: 'blocks-collections',
                 iconUrl: 'https://img.icons8.com/color/48/000000/medium-icons.png'
@@ -31,7 +31,7 @@ exports.page = {
         },
         {
             type: 'link',
-            value: 'Media',
+            value: 'メディア',
             attrs: {
                 pageId: 'blocks-media',
                 iconUrl: 'https://img.icons8.com/color/48/000000/image.png'
@@ -39,7 +39,7 @@ exports.page = {
         },
         {
             type: 'link',
-            value: 'Embeds',
+            value: '埋め込み',
             attrs: {
                 pageId: 'blocks-embed',
                 iconUrl: 'https://img.icons8.com/color/48/000000/map-marker.png'
