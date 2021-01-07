@@ -3,7 +3,7 @@ const getEnv = (e: string, def?: string) => {
   if (v) {
     return v;
   } else {
-    throw new Error(`Could not find env ${e}`);
+    throw new Error(`環境が見つかりませんでした ${e}`);
   }
 };
 
