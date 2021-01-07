@@ -87,13 +87,13 @@ const mainPage = async (user: User): Promise<object> => {
 
 export default async (req: NowRequest, res: NowResponse) => {
   if (req.method !== 'POST') {
-    res.writeHead(405, 'Not allowed');
+    res.writeHead(405, '許可されていません');
     res.end();
     return;
   }
 
   if (!verifyTreeRequest(req)) {
-    res.writeHead(400, 'Request verification failed');
+    res.writeHead(400, 'リクエストの検証に失敗しました');
     res.end();
     return;
   }
@@ -103,8 +103,8 @@ export default async (req: NowRequest, res: NowResponse) => {
   try {
     user = await fetchUser(treeReq);
   } catch (err) {
-    console.error('Failed to fetch user: ', err);
-    res.writeHead(500, 'Failed to fetch user');
+    console.error('ユーザーの取得に失敗しました： ', err);
+    res.writeHead(500, 'ユーザーの取得に失敗しました');
     res.end();
     return;
   }
@@ -119,8 +119,8 @@ export default async (req: NowRequest, res: NowResponse) => {
     try {
       await saveUser(authUser);
     } catch (err) {
-      console.error('Failed to save user: ', err);
-      res.writeHead(500, 'Failed to save user');
+      console.error('ユーザーの保存に失敗しました: ', err);
+      res.writeHead(500, 'ユーザーの保存に失敗しました');
       res.end();
       return;
     }
