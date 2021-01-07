@@ -13,20 +13,20 @@ const ACTION_SUBMIT_WORKSPACE = 'submit_workspace';
 const handler = async (req, res) => {
     // Only accept POST requests
     if (req.method !== 'POST') {
-        return sendMessage(res, 404, 'Page not found.');
+        return sendMessage(res, 404, 'ページが見つかりません。');
     }
 
     const payload = await json(req);
 
     if (!hasAccess(payload)) {
-        return sendMessage(res, 401, 'You do not have access to this content.');
+        return sendMessage(res, 401, 'このコンテンツにアクセスすることはできません。');
     }
 
     const hasFullAccess = get(payload, 'permissions', []).includes('full_access');
     const installationId = payload.installation_id;
 
     if (!installationId) {
-        return sendMessage(res, 400, 'No Installation ID provided.')
+        return sendMessage(res, 400, 'インストールIDは提供されていません。')
     }
 
     const action = defaultTo(payload.action, '');
@@ -34,7 +34,7 @@ const handler = async (req, res) => {
         if (action === ACTION_SUBMIT_ACCESS_KEY) {
             const personalAccessToken = parseAccessTokenFromProps(payload);
             await saveConfiguration(installationId, personalAccessToken, null);
-            return sendRedirect(res, null, 'Configuration has been saved.');
+            return sendRedirect(res, null, '構成が保存されました。');
         } else if (action === ACTION_SUBMIT_WORKSPACE) {
             const config = await getConfig(installationId);
             const personalAccessToken = get(config, 'personalAccessToken', null);
@@ -44,7 +44,7 @@ const handler = async (req, res) => {
             return sendRedirect(res, null, 'Configuration has been saved.');
         }
     } catch (error) {
-        return sendNotification(res, `Error saving configuration. ${defaultTo(error.message, '')}`);
+        return sendNotification(res, `構成の保存中にエラーが発生しました。 ${defaultTo(error.message, '')}`);
     }
 
 
@@ -116,7 +116,7 @@ const sendNeedsConfiguration = (res, hasFullAccess) => {
 }
 
 const sendNotYetConfigured = (res) => {
-    sendMessage(res, 501, 'This integration is not yet configured. This can only be done by someone with Full Access permissions.');
+    sendMessage(res, 501, 'この統合はまだ構成されていません。 フルアクセス権限を持つユーザーのみが実行できます。');
 }
 
 const getConfig = async (installationId) => {
@@ -135,7 +135,7 @@ const hasAccess = (payload) => {
 const parseAccessTokenFromProps = (payload) => {
     const personalAccessToken = getPropValue(payload.props, 'personal_access_token');
     if (personalAccessToken === '') {
-        throw new Error('Please enter your personal access token.');
+        throw new Error('パーソナルアクセストークンを入力してください。');
     }
     return personalAccessToken;
 }
@@ -144,7 +144,7 @@ const parseWorkspaceIdFromProps = (payload, workspaces) => {
     const workspaceSelectedIndex = getPropValue(payload.props, 'workspace_selected_index');
     const workspaceId = get(workspaces, `items[${workspaceSelectedIndex}].id`, null);
     if (workspaceId === null) {
-        throw new Error('Please select a workspace.');
+        throw new Error('ワークスペースを選択してください。');
     }
     return workspaceId;
 }
@@ -155,7 +155,7 @@ const getPropValue = (props, name) => {
 
 const renderSettingsForm = (personalAccessToken) => {
     return {
-        title: 'Settings',
+        title: 'セッティング',
         props: [
             {
                 name: 'personal_access_token',
@@ -165,29 +165,29 @@ const renderSettingsForm = (personalAccessToken) => {
         blocks: [
             {
                 type: 'heading1',
-                value: 'Welcome!'
+                value: 'ようこそ!'
             },
             {
                 type: 'text',
-                value: 'This Integration is backed by [Typeform](https://www.typeform.com/), which is an online forms and surveys service. In order to get started, please provide the information below. Follow our [Typeform guide](https://www.notion.so/withtree/Typeform-8314af0825ab4d8caec124fee95de1c0) to get started.'
+                value: 'このインテグレーションは、オンラインフォームおよび調査サービスである[タイプフォーム](https://www.typeform.com/)によって支えられています。 開始するには、以下の情報を提供してください。 [タイプフォームガイド](https://www.notion.so/withtree/Typeform-8314af0825ab4d8caec124fee95de1c0)に従って開始してください。'
             },
             {
                 type: 'heading3',
-                value: 'Typeform Configuration' 
+                value: 'タイプフォーム構成' 
             },
             {
                 type: 'input',
                 bindToProp: 'personal_access_token',
                 value: personalAccessToken,
                 attrs: {
-                    label: 'Personal Access Token',
-                    placeholder: 'Hidden',
+                    label: 'パーソナルアクセストークン',
+                    placeholder: '隠す',
                     display_type: 'legend'
                 }
             },
             {
                 type: 'text',
-                value: '👉 [How do I find my Personal Access Token?](https://www.notion.so/withtree/Typeform-8314af0825ab4d8caec124fee95de1c0)',
+                value: '👉[パーソナルアクセストークンを見つけるには？](https://www.notion.so/withtree/Typeform-8314af0825ab4d8caec124fee95de1c0)',
                 attrs: {
                     size: 'small',
                     appearance: 'light'
@@ -198,7 +198,7 @@ const renderSettingsForm = (personalAccessToken) => {
             },
             {
                 type: 'button',
-                value: 'Submit',
+                value: '参加',
                 attrs: {
                     action: ACTION_SUBMIT_ACCESS_KEY,
                     disabled: false
@@ -206,7 +206,7 @@ const renderSettingsForm = (personalAccessToken) => {
             },
             {
                 type: 'text',
-                value: 'Note: as a user with Full Access permissions, you can update this information at any time. Just tap the "⚙️ Configure Integration" link at the bottom of the main page.',
+                value: '注：フルアクセス権限を持つユーザーは、いつでもこの情報を更新できます。 メインページの下部にある「⚙️統合の構成」リンクをタップしてください。',
                 attrs: {
                     size: 'small',
                     appearance: 'light'
@@ -219,11 +219,11 @@ const renderSettingsForm = (personalAccessToken) => {
 const renderWorkspaceSelector = (workspaces) => {
     if (workspaces.length === 0) {
         return {
-            title: 'Select Workspace',
+            title: 'ワークスペースを選択',
             blocks: [
                 {
                     type: 'text',
-                    value: 'You don\'t have any workspaces yet. Head over to [Typeform](https://admin.typeform.com/) to create one.', 
+                    value: 'まだワークスペースがありません。 [Typeform]（https://admin.typeform.com/）にアクセスして作成してください。', 
                     attrs: {
                         appearance: 'light'
                     }
@@ -232,7 +232,7 @@ const renderWorkspaceSelector = (workspaces) => {
         }
     }
     return {
-        title: 'Select Workspace',
+        title: 'ワークスペースを選択',
         props: [
             {
                 name: 'workspace_selected_index',
@@ -243,7 +243,7 @@ const renderWorkspaceSelector = (workspaces) => {
         blocks: [
             {
                 type: 'heading2',
-                value: 'What workspace do you want to use?'
+                value: 'どのワークスペースを使用しますか？'
             },
             {
                 type: 'spacer'
@@ -255,7 +255,7 @@ const renderWorkspaceSelector = (workspaces) => {
                     'items': workspaces.map((w) => w.name)
                 },
                 'attrs': {
-                    'label': 'Select a workspace...'
+                    'label': 'ワークスペースを選択してください...'
                 }
             },
             {
@@ -263,7 +263,7 @@ const renderWorkspaceSelector = (workspaces) => {
             },
             {
                 type: 'button',
-                value: 'Save',
+                value: '保存',
                 attrs: {
                     action: ACTION_SUBMIT_WORKSPACE,
                     disabled: false
@@ -280,14 +280,14 @@ const renderActiveForms = (forms, hasFullAccess) => {
         blocks = [
             {
                 type: 'heading2',
-                value: 'There are no active polls.'
+                value: 'アクティブな投票はありません。'
             },
         ]
     } else {
         blocks = [
             {
                 type: 'heading2',
-                value: 'Active Polls'
+                value: 'アクティブ投票'
             },
             {
                 type: 'spacer'
@@ -295,7 +295,7 @@ const renderActiveForms = (forms, hasFullAccess) => {
             ...forms.map((form) => {
                 return {
                     type: 'link',
-                    value: `📋 ${defaultTo(form.title, 'Untitled Form')}`, 
+                    value: `📋 ${defaultTo(form.title, '無題のフォーム')}`, 
                     attrs: {
                         pageId: `${PAGE_ID_FORM}/${form.id}`
                     } }
@@ -306,7 +306,7 @@ const renderActiveForms = (forms, hasFullAccess) => {
         blocks = blocks.concat(configureBlocks());
     }
     return {
-        title: 'Polls',
+        title: '投票',
         blocks
     };
 }
@@ -318,14 +318,14 @@ const configureBlocks = () => {
         },
         {
             type: 'link',
-            value: '⚙️ Configure Integration',
+            value: '⚙️ インテグレーション構成',
             attrs: {
                 pageId: PAGE_ID_SETTINGS
             }
         },
         {
             type: 'link',
-            value: '🗂 Select Workspace',
+            value: '🗂 ワークスペースを選択',
             attrs: {
                 pageId: PAGE_ID_SELECT_WORKSPACE
             }
@@ -335,7 +335,7 @@ const configureBlocks = () => {
 
 const renderFormPage = (name, url) => {
     return {
-        title: defaultTo(name, 'Untitled Form'),
+        title: defaultTo(name, '無題のフォーム'),
         blocks: [
             {
                 type: 'typeform',
