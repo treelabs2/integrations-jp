@@ -44,10 +44,10 @@ const authorizePage = async (req: TreeRequest): Promise<object> => {
   const authorizeUrl = await getAuthorizeUrl(req);
   return {
     blocks: [
-      { type: 'text', value: 'To see events from your Google calendar, please **click the authorize** button below.' },
+      { type: 'text', value: 'Googleカレンダーの予定を表示するには、下の**承認**ボタンをクリックしてください。' },
       {
         type: 'button',
-        value: 'Authorize',
+        value: '承認する',
         attrs: {
           onClick: {
             action: 'open',
@@ -67,20 +67,20 @@ const mainPage = async (user: User): Promise<object> => {
   try {
     events = await todaysEvents(user, timezone);
   } catch (err) {
-    console.error('Failed to fetch events: ', err);
+    console.error('イベントのフェッチに失敗しました: ', err);
     return [
-      { type: 'text', value: 'Failed to fetch events' }
+      { type: 'text', value: 'イベントのフェッチに失敗しました' }
     ];
   }
 
   const blocks = [
-    { type: 'heading1', value: 'Today\'s agenda' }
+    { type: 'heading1', value: '今日の議題' }
   ];
   if (events.length > 0) {
     blocks.push(...formatEvent(events[0], timezone, true));
     events.slice(1,).forEach( (event: Event) => blocks.push(...formatEvent(event, timezone)) );
   } else {
-    blocks.push({ type: 'text', value: 'No agenda. You\'re free today.' });
+    blocks.push({ type: 'text', value: '議題はありません。 今日は自由です。' });
   }
   return { blocks };
 };
