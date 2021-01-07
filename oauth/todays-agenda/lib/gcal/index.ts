@@ -15,7 +15,7 @@ export const userTimezone = async (user: User): Promise<string> => {
     );
     return response.data.value;
   } catch (err) {
-    console.error('Error fetching user timezone: ', err);
+    console.error('ユーザーのタイムゾーンの取得中にエラーが発生しました: ', err);
     return 'UTC';
   }
 };
