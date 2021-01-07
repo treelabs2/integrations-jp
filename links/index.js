@@ -4,18 +4,18 @@ var page1 = {
     blocks: [
         {
             type: 'heading2',
-            value: 'Page 1'
+            value: 'ページ1'
         },
         {
             type: 'link',
-            value: 'Go to Page 2',
+            value: 'ページ2に移動',
             attrs: {
                 pageId: '2'
             }
         },
         {
             type: 'link',
-            value: 'Go to website ↗',
+            value: 'ウェブサイトに移動↗',
             attrs: {
                 url: 'https://withtree.com'
             }
@@ -25,7 +25,7 @@ var page1 = {
             value: 'https://source.unsplash.com/800x600/?forest',
             attrs: {
                 format: 'landscape',
-                caption: 'Images can also open links.',
+                caption: '画像はリンクを開くこともできます。',
                 onClick: {
                     action: 'open',
                     payload: {
@@ -41,7 +41,7 @@ var page2 = {
     blocks: [
         {
             type: 'heading2',
-            value: 'Page 2'
+            value: 'ページ2'
         }
     ]
 };
