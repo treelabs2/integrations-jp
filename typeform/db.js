@@ -29,7 +29,7 @@ const createConfiguration = async (installationId, personalAccessToken, workspac
             }
         ));
     } catch (error) {
-        throw new Error(`Failed to access database.`);
+        throw new Error(`データベースへのアクセスに失敗しました。`);
     }
 }
 
@@ -49,7 +49,7 @@ const updateConfiguration = async (ref, installationId, personalAccessToken, wor
                 },
             ));
     } catch (error) {
-        throw new Error(`Failed to access database.`);
+        throw new Error(`データベースへのアクセスに失敗しました。`);
     }
 }
 
