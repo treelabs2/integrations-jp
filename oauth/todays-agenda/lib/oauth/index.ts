@@ -25,7 +25,7 @@ export const getAuthorizeUrl = async (req: TreeRequest): Promise<string> => {
     const slug = await getSpaceSlug(req);
     treeAppUrl = `${TREE_APP_URL}/${slug}/workspace/${TREE_INTEGRATION_ID}`;
   } catch (err) {
-    console.error('Failed to generate tree app URI. Falling back to ', treeAppUrl);
+    console.error('ツリーアプリのURIの生成に失敗しました。 Falling back to ', treeAppUrl);
   }
 
   const params = querystring.stringify(
@@ -73,13 +73,13 @@ export const authorizeUser = async (user: User): Promise<[User|null, boolean]> =
 
     return [user, false];
   } catch (err) {
-    console.debug('Access token is invalid, trying to refresh...');
+    console.debug('アクセストークンが無効です。更新します...');
     try {
       const accessToken = await refreshAccessToken(user);
       user.googleAccessToken.accessToken = accessToken;
       return [user, true];
     } catch (err) {
-      console.debug('Failed to refresh access token');
+      console.debug('アクセストークンの更新に失敗しました');
       return [null, false];
     }
   }
@@ -90,12 +90,12 @@ export const handleAuthorizationCodeGrant = async (host: string, path: string): 
   const params = parsed.query;
 
   if (!params) {
-    throw new Error('Expecting query parameters');
+    throw new Error('クエリパラメータが必要です');
   }
 
   const code = params.code;
   if (!code) {
-    throw new Error('Missing `code` parameter');
+    throw new Error('`code`パラメータがありません');
   }
 
   let accessToken;
@@ -118,8 +118,8 @@ export const handleAuthorizationCodeGrant = async (host: string, path: string): 
     accessToken = response.data.access_token;
     refreshToken = response.data.refresh_token;
   } catch (err) {
-    console.error('Failed to exchange authorization code: ', err);
-    throw new Error('Failed to get access token');
+    console.error('認証コードの交換に失敗しました： ', err);
+    throw new Error('アクセストークンの取得に失敗しました');
   }
 
   const state = fromState(params.state as string);
