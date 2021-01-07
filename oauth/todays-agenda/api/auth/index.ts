@@ -6,7 +6,7 @@ export default async (req: NowRequest, res: NowResponse) => {
   const host = req.headers.host;
   const url = req.url;
   if (!url || !host) {
-      res.writeHead(400, 'Invalid URL');
+      res.writeHead(400, '無効なURL');
       res.end();
       return;
   }
@@ -17,8 +17,8 @@ export default async (req: NowRequest, res: NowResponse) => {
     try {
       await saveUser(user);
     } catch (err) {
-      console.error('Failed to save user: ', err);
-      res.writeHead(500, 'Failed to save user');
+      console.error('ユーザーの保存に失敗しました： ', err);
+      res.writeHead(500, 'ユーザーの保存に失敗しました：');
       res.end();
       return;
     }
@@ -29,8 +29,8 @@ export default async (req: NowRequest, res: NowResponse) => {
     res.end();
     return;
   } catch (err) {
-    console.error('Failed to handle authorization code: ', err);
-    res.writeHead(500, 'Failed to handle authorization code');
+    console.error('認証コードの処理に失敗しました: ', err);
+    res.writeHead(500, '認証コードの処理に失敗しました');
     res.end();
     return;
   }
