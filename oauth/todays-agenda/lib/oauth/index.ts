@@ -25,7 +25,7 @@ export const getAuthorizeUrl = async (req: TreeRequest): Promise<string> => {
     const slug = await getSpaceSlug(req);
     treeAppUrl = `${TREE_APP_URL}/${slug}/workspace/${TREE_INTEGRATION_ID}`;
   } catch (err) {
-    console.error('ツリーアプリのURIの生成に失敗しました。 Falling back to ', treeAppUrl);
+    console.error('ツリーアプリのURIの生成に失敗しました。 次のURLにフォールバック ', treeAppUrl);
   }
 
   const params = querystring.stringify(
