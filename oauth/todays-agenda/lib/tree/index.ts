@@ -9,7 +9,7 @@ export const verifyTreeRequest = (req: IncomingMessage): boolean => {
     const parsed = parseRequest(req, {});
     return verifyHMAC(parsed, TREE_CLIENT_SECRET);
   } catch (err) {
-    console.error('Request verification failed: ', err);
+    console.error('リクエストの検証に失敗しました： ', err);
     return false;
   }
 };
@@ -42,6 +42,6 @@ query ($spaceId: ID!) {
     return response.data.data.space.space.slug;
   } catch (err) {
     console.error('Space fetch error: ', err);
-    throw new Error('Failed to fetch space');
+    throw new Error('スペースのフェッチに失敗しました');
   }
 };
