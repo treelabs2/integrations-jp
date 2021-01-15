@@ -17,7 +17,7 @@ exports.page = {
                 },
                 {
                     type: 'button',
-                    value: 'Submit',
+                    value: '参加',
                     attrs: {
                         onClick: {
                             action: 'post',
@@ -45,7 +45,7 @@ exports.page = {
                 },
         {
             type: 'heading2',
-            value: 'Input'
+            value: '入力'
         },
         {
             type: 'divider',
@@ -77,7 +77,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Secondary',
+            value: 'その他',
             attrs: {
                 type: 'secondary'
             }
@@ -134,8 +134,8 @@ exports.page = {
         {
             type: 'input',
             attrs: {
-                placeholder: 'Enter your name',
-                label: 'Name',
+                placeholder: '名前を入力してください。',
+                label: '名前',
                 capitalize: 'characters'
             }
         },
@@ -143,7 +143,7 @@ exports.page = {
             type: 'input',
             value: '123456',
             attrs: {
-                label: 'Password',
+                label: 'パスワード',
                 secure: true
             }
         },
@@ -151,7 +151,7 @@ exports.page = {
             type: 'input',
             value: '無効',
             attrs: {
-                label: 'Status',
+                label: 'ステータス',
                 disabled: true
             }
         },
@@ -162,7 +162,7 @@ exports.page = {
         {
             type: 'input',
             attrs: {
-                placeholder: 'Enter a comment',
+                placeholder: 'コメントを入力してください。',
                 multiline: true
             }
         },
@@ -202,7 +202,7 @@ exports.page = {
             type: 'switch',
             value: true,
             attrs: {
-                label: 'Dark Mode'
+                label: 'ダークモード'
             }
         },
         {
@@ -210,7 +210,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Date Picker'
+            value: '日付ピッカー'
         },
         {
             type: 'datepicker',

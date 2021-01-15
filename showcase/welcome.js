@@ -8,9 +8,9 @@ exports.page = {
             type: 'collection',
             value: {
                 items: [
-                    'Actions',
-                    'Collections',
-                    'Operators',
+                    'アクション',
+                    'コレクション',
+                    '演算子',
                 ]
             },
             attrs: {
@@ -40,7 +40,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: '例',
+            value: 'Examples',
         },
         {
             type: 'link',

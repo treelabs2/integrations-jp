@@ -1,9 +1,9 @@
 exports.page = {
-    title: 'Embed',
+    title: '埋め込み',
     blocks: [
         {
             type: 'heading2',
-            value: 'Embed'
+            value: '埋め込み'
         },
         {
             type: 'divider',
@@ -21,7 +21,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'Typeform'
+            value: 'タイプフォーム'
         },
         {
             type: 'typeform',
@@ -32,7 +32,7 @@ exports.page = {
         },
          {
             type: 'heading3',
-            value: 'processmaker'
+            value: 'プロセスメーカー'
         },
         {
             type: 'googlemap',

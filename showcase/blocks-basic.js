@@ -18,14 +18,14 @@ exports.page = {
         },
         {
             type: 'text',
-            value: '軽いテキスト',
+            value: '薄いテキスト',
             attrs: {
                 appearance: 'light'
             }
         },
         {
             type: 'text',
-            value: '危険テキスト',
+            value: '赤字のテキスト',
             attrs: {
                 appearance: 'danger'
             }
@@ -65,42 +65,42 @@ exports.page = {
         },
         {
             type: 'callout',
-            value: 'これはインフォメッセージ付きのメモです。',
+            value: 'これはインフォメッセージ付きの文章です。',
             attrs: {
                 type: 'info'
             }
         },
         {
             type: 'callout',
-            value: 'これはサクセスメッセージ付きのメモです。',
+            value: 'これはサクセスメッセージ付きの文章です。',
             attrs: {
                 type: 'success'
             }
         },
         {
             type: 'callout',
-            value: 'これは警告メッセージ付きのメモです。',
+            value: 'これは警告メッセージ付きの文章です。',
             attrs: {
                 type: 'warning'
             }
         },
         {
             type: 'callout',
-            value: 'これはエラーメッセージ付きのメモです。',
+            value: 'これはエラーメッセージ付きの文章です。',
             attrs: {
                 type: 'error'
             }
         },
         {
             type: 'callout',
-            value: 'これは ~~カスタムアイコン~~ と **マークダウン** が付いたメモです。',
+            value: 'これは ~~カスタムアイコン~~ と **マークダウン** が付いた文章です。',
             attrs: {
                 iconUrl: 'https://img.icons8.com/color/48/000000/accessibility2--v1.png'
             }
         },
         {
             type: 'callout',
-            value: 'これは小さなテキストのメモです。',
+            value: 'これは小さなテキストの文章です。',
             attrs: {
                 type: 'info',
                 small: true

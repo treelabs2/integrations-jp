@@ -23,7 +23,7 @@ exports.page = {
             type: 'image',
             value: '${prop("photo_url")}',
             attrs: {
-                caption: 'The trees of Mill Valley, California (click to open).',
+                caption: 'カリフォルニア州ミルバレーの木々（クリックして開く）。',
                 format: 'landscape',
                 onClick: {
                     action: 'open',
@@ -38,7 +38,7 @@ exports.page = {
             value: ['https://images.unsplash.com/photo-1496776574435-bf184935f729','https://images.unsplash.com/photo-1496776574435-bf184935f729','https://images.unsplash.com/photo-1496776574435-bf184935f729'],
             attrs: {
                 format: 'square',
-                caption: 'Square'
+                caption: 'スクエア'
             }
         },
         {
@@ -46,7 +46,7 @@ exports.page = {
             value: '${prop("photo_url")}',
             attrs: {
                 format: 'original',
-                caption: 'Original'
+                caption: 'オリジナル'
             }
         },
         {
@@ -54,7 +54,7 @@ exports.page = {
         },
         {
             type: 'heading3',
-            value: 'QR Code'
+            value: 'QRコード'
         },
         {
             type: 'qr',
