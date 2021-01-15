@@ -54,7 +54,7 @@ exports.page = {
         },
         {
             type: 'quote',
-            value: '一人で速く行き、一緒に遠くへ行きます。'
+            value: '速く行きたければ、ひとりで行け。遠くまで行きたければ、みんなで行け。'
         },
         {
             type: 'divider'
