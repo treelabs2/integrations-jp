@@ -234,7 +234,7 @@ exports.page = {
                 onClick: {
                     action: 'notify',
                     payload: {
-                        message: 'Image clicked!',
+                        message: '写真がクリックされました!',
                         type: 'success'
                     }
                 }

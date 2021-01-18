@@ -98,7 +98,7 @@ exports.page = {
                             value: '${get(item, "download_url")}',
                             attrs: {
                                 format: 'square',
-                                caption: 'Author: ${get(item, "author")}',
+                                caption: '作者: ${get(item, "author")}',
                             }
                         },
                     ]
@@ -117,19 +117,19 @@ exports.page = {
             value: {
                 items: [
                     {
-                        label: 'Action 1',
+                        label: 'アクション 1',
                         pageId: '1'
                     },
                     {
-                        label: 'Action 2',
+                        label: 'アクション 2',
                         pageId: '2'
                     },
                     {
-                        label: 'Action 3',
+                        label: 'アクション 3',
                         pageId: '3'
                     },
                     {
-                        label: 'Action 4',
+                        label: 'アクション 4',
                         pageId: '4'
                     }
                 ],
