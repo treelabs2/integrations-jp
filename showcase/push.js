@@ -73,7 +73,7 @@ exports.page = {
     blocks: [
     {
             type: 'link',
-            value: 'Documentation: Actions →',
+            value: 'ドキュメント：アクション →',
             attrs: {
                 url: 'https://treedocs.vercel.app/docs/v1/hooks/ui/actions/'
             }
@@ -123,7 +123,7 @@ exports.page = {
     {
       "type": "dropdown",
       "value": {
-        "items": ["", "PUSH通知を送信する"],
+        "items": ["", "PUSH通知を送信"],
         "selectedIndex": 0
       },
       "bindToProp": "agreement"

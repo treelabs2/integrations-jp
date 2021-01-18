@@ -8,11 +8,11 @@ exports.page = {
     blocks: [
         {
             type: 'heading2',
-            value: 'Actionsアクション',
+            value: 'アクション',
         },
         {
             type: 'link',
-            value: 'Documentation: Actions →ドキュメント：アクション→',
+            value: 'ドキュメント：アクション→',
             attrs: {
                 url: 'https://treedocs.now.sh/docs/v1/hooks/ui/actions/'
             }
@@ -37,8 +37,8 @@ exports.page = {
               {
             type: 'input',
             attrs: {
-                placeholder: 'Enter your name　名前を入力してください。',
-                label: 'Name　名前',
+                placeholder: '名前を入力してください。',
+                label: '名前',
                 capitalize: 'characters'
             }
         },
@@ -46,7 +46,7 @@ exports.page = {
             type: 'input',
             value: '123456',
             attrs: {
-                label: 'Password　パスワード',
+                label: 'パスワード',
                 secure: true
             }
         },
@@ -57,13 +57,13 @@ exports.page = {
         {
             type: 'input',
             attrs: {
-                placeholder: 'メッセージを入れてください${prop("counter")}',
+                placeholder: 'メッセージを入れてください ${prop("counter")}',
                 multiline: true
             }
         },
          {
             type: 'button',
-            value: 'PUSH送信を送ります',
+            value: 'PUSH送信',
             attrs: {
                 onClick: {
                     action: 'post',
@@ -95,7 +95,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Notify　通知',
+            value: '通知',
             attrs: {
                 onClick: {
                     action: 'notify',
@@ -108,7 +108,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Open URL　オープンURL',
+            value: 'オープンURL',
             attrs: {
                 onClick: {
                     action: 'open',
@@ -120,7 +120,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Open Page　オープンページ',
+            value: 'オープンページ',
             attrs: {
                 onClick: {
                     action: 'open',
@@ -132,7 +132,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Counter ${prop("counter")}',
+            value: 'カウンター ${prop("counter")}',
             attrs: {
                 onClick: {
                     action: 'updateProps',
@@ -149,7 +149,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Send GET Request',
+            value: 'GETリクエストを送信',
             attrs: {
                 onClick: {
                     action: 'fetch',
@@ -173,7 +173,7 @@ exports.page = {
         },
         {
             type: 'button',
-            value: 'Send POST Request　POSTリクエストを送信する',
+            value: 'POSTリクエストを送信',
             attrs: {
                 onClick: {
                     action: 'post',
@@ -230,7 +230,7 @@ exports.page = {
             value: 'https://source.unsplash.com/800x600/?forest',
             attrs: {
                 format: 'landscape',
-                caption: 'Click me!',
+                caption: 'クリックしてください!',
                 onClick: {
                     action: 'notify',
                     payload: {

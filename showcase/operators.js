@@ -62,7 +62,7 @@ exports.page = {
         },
         {
             type: 'link',
-            value: 'Documentation: Operators →',
+            value: 'ドキュメント：オペレーター →',
             attrs: {
                 url: 'https://treedocs.vercel.app//docs/v1/advanced/operators/'
             }
@@ -79,12 +79,12 @@ exports.page = {
             value: false,
             bindToProp: 'accepted',
             attrs: {
-                label: 'Accept Terms'
+                label: '利用規約に同意する'
             }
         },
         {
             type: 'button',
-            value: '継続する',
+            value: '継続',
             attrs: {
                 disabled: '${not(prop("accepted"))}',
                 onClick: {
@@ -98,7 +98,7 @@ exports.page = {
         },
         {
             type: 'text',
-            value: 'Status: ${if(prop("accepted"), "Thank you!", "Please accept the terms")}',
+            value: 'ステータス: ${if(prop("accepted"), "ありがとうございます!", "利用規約に同意してください。")}',
         },
         {
             type: 'divider'
@@ -109,7 +109,7 @@ exports.page = {
         },
         {
             type: 'callout',
-            value: `Today is day **\${weekday(today())}** of the week. It is **\${elementAt(${JSON.stringify(WEEKDAYS)}, weekday(today())-1)}**. In 697 days, it will be a **\${elementAt(${JSON.stringify(WEEKDAYS)}, weekday(addToDate(today(), 697, "days")))}**, and the 9th digit of π divided by *e* is **\${mod(floor(multiply(pow(10,9), divide(pi(), exp()))), 10)}**. If we replace "Workwell" with "Tree" in "${PHRASE}", we get **"\${replace("${PHRASE}", "Workwell", "Tree")}"**.`,
+            value: `今日は週の **\${weekday(today())}** 日目です。 今日は **\${elementAt(${JSON.stringify(WEEKDAYS)}, weekday(today())-1)}** 。 697日で、 **\${elementAt(${JSON.stringify(WEEKDAYS)}, weekday(addToDate(today(), 697, "days")))}**になり、 π を *e* で割った9桁目は **\${mod(floor(multiply(pow(10,9), divide(pi(), exp()))), 10)}** です。 "${PHRASE}" で "Workwell" を "Tree" に置き換えると、 **"\${replace("${PHRASE}", "Workwell", "Tree")}"** になります。`,
             attrs: {
                 type: 'info'
             }
@@ -126,7 +126,7 @@ exports.page = {
                 includeTime: false,
             },
             attrs: {
-                label: 'Select event date...',
+                label: 'イベントの日付を選択...',
                 allowEndDate: true,
                 allowTime: true,
             },
@@ -134,7 +134,7 @@ exports.page = {
         },
         {
             type: 'text',
-            value: `Event lasts **\${if(
+            value: `イベントは **\${if(
                     not(isEmpty(get(prop("eventDate"), "endDate"))),
                     round(dateDifference(
                         get(prop("eventDate"), "endDate"),
@@ -142,7 +142,7 @@ exports.page = {
                         "days"
                     )) + 1,
                     "1"
-                )}** day(s).`,
+                )}** 日間続きます。`,
         },
         {
             type: 'divider'
@@ -156,14 +156,14 @@ exports.page = {
             bindToProp: 'name',
             attrs: {
                 placeholder: '名前を入力してください。',
-                label: 'Name'
+                label: '名前'
             }
         },
         {
             type: 'input',
             attrs: {
                 placeholder: 'パスワードを入力してください。',
-                label: 'Password',
+                label: 'パスワード',
                 disabled: false,
                 secure: true,
             }
@@ -208,28 +208,28 @@ exports.page = {
         },
         {
             type: 'heading5',
-            value: 'Hands',
+            value: 'じゃんけんの手',
         },
         {
             type: 'multiselect',
             value: {
-                items: ['Rock', 'Scissors', 'Paper'],
+                items: ['グー', 'チョキ', 'パー'],
             },
             bindToProp: 'hands',
             attrs: {
-                label: 'Select one or more hands...',
+                label: '1つ以上のじゃんけんの手を選択してください...',
             }
         },
         {
             type: 'text',
-            value: 'You have selected **${if(isEmpty(prop("hands")), "no", length(prop("hands")))}** hands.',
+            value: '現在 **${if(isEmpty(prop("hands")), "0", length(prop("hands")))}** 個のじゃんけんの手を選択しています。',
         },
         {
             type: 'divider'
         },
         {
             type: 'heading5',
-            value: 'Theme',
+            value: 'テーマ',
         },
         {
             type: 'singleselect',

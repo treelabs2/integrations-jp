@@ -124,7 +124,7 @@ exports.page = {
                             value: '${get(item, "download_url")}',
                             attrs: {
                                 format: 'square',
-                                caption: 'Author: ${get(item, "author")}',
+                                caption: '作者: ${get(item, "author")}',
                             }
                         },
                         {
