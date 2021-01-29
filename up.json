@@ -15,7 +15,7 @@
     }
   },
   "static":{
-    "dir": "showcase/public"
+    "dir": "showcase"
   },
   "tags": {
     "Owner": "eSoliaRickCogley",
